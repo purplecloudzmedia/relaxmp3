@@ -1,0 +1,177 @@
+img {
+    width:100%;
+}
+
+/*Review star color*/
+.checked {
+  color: orange;
+}
+
+
+
+.container{
+  
+    display:grid;
+    height: 600vh;
+    grid-template-columns: 400px 400px;
+    justify-content: center;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 10fr 5fr 1fr 0.2fr;
+    grid-template-areas: 
+        "nav nav"
+        "main main"
+        "product1 desc1" 
+        "product2 desc2"
+        "product3 desc3"
+        "product4 desc4"
+        "testimonials testimonials"
+        "FAQs FAQs"
+        "footer footer";
+    grid-gap: 0.2rem;
+    font-family: "Helvetica,sans-serif";
+    font-size:18px;
+    color:black;
+    
+    
+
+    
+}
+
+
+
+nav{
+    background:indigo;
+    grid-area: nav;
+    padding: 10px;
+    color:white;
+    
+    
+}
+
+main{
+    
+    grid-area: main;
+    padding: 20px;
+}
+
+#paypal-secure{
+     max-width: 300px;
+    max-height: 300px;
+    float: right;
+    padding: 5px;
+}
+
+#product1{
+    
+    grid-area: product1;
+    padding: 20px;
+}
+
+#desc1{
+    
+    grid-area: desc1;
+    padding: 20px;
+}
+
+#product2{
+    
+    grid-area: product2;
+    padding: 20px;
+}
+    
+#desc2{
+    
+    grid-area: desc2;
+    padding: 20px;
+}
+
+#product3{
+   
+    grid-area: product3;
+    padding: 20px;
+}
+
+#desc3{
+    
+    grid-area: desc3;
+    padding: 20px;
+}
+
+#product4{
+    
+    grid-area: product4;
+    padding: 20px;
+
+}
+
+#desc4{
+    
+    grid-area: desc4;
+    padding: 20px;
+}
+
+
+
+#testimonials{
+    
+    grid-area: testimonials;
+    padding: 20px;
+    
+    
+}
+
+#avatar {
+    max-width: 50px;
+    max-height: 50px;
+    float: left;
+    padding: 5px;
+    
+}
+
+.fontawesome {
+    float:right;
+}
+
+
+
+#FAQs{
+    
+    grid-area: FAQs;
+    text-align: center
+}
+
+
+footer{
+    background:indigo;
+    grid-area: footer;
+    text-align: center;
+    color:white;
+    font-size:16px;
+    padding: 10px;
+}
+
+
+
+
+
+/*Media query, if browser width 700px and smaller, grid becomes single column*/
+@media only screen and (max-width: 700px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10fr 5fr 1fr 0.2fr;
+        grid-template-areas:
+        "nav"
+        "main"
+        "product1" 
+        "desc1" 
+        "product2" 
+        "desc2"
+        "product3" 
+        "desc3"
+        "product4" 
+        "desc4"
+        "testimonials"
+        "FAQs"
+        "footer";
+    }
+}
+    
